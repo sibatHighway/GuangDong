@@ -1,6 +1,7 @@
-package cn.sibat
+package cn.sibat.highway
 
-import org.apache.spark.sql.{DataFrame, Dataset}
+import org.apache.spark.sql.functions.col
+import org.apache.spark.sql.{DataFrame}
 
 /**
   * 清洗收费站打卡数据
@@ -11,6 +12,9 @@ class CleanDataUtils(data: DataFrame) {
 
   private def newUtils(df: DataFrame): CleanDataUtils = new CleanDataUtils(df)
 
+//  def removeMark(): CleanDataUtils = {
+//    val normalData = data.columns.map(c => col(c))
+//  }
 }
 
 object CleanDataUtils {
